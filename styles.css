@@ -1,20 +1,14 @@
 /* === Tipografía general === */
 body {
   font-family: 'Lato', sans-serif;
-  background-color: #FFF8E7; /* crema */
+  background-color: #FFF8E7;
   color: #333;
   line-height: 1.6;
 }
 
-/* === Colores principales ===
-   Terracota: #D57A66
-   Crema:     #FFF8E7
-   Verde oliva: #6B8E23
-*/
-
 /* === Navbar === */
 .navbar {
-  background-color: #D57A66; /* terracota */
+  background-color: #D57A66;
 }
 
 .navbar-brand {
@@ -24,7 +18,7 @@ body {
 }
 
 .navbar-brand:hover {
-  color: #F5E4C3; /* crema clara */
+  color: #F5E4C3;
 }
 
 .nav-link {
@@ -34,23 +28,23 @@ body {
 }
 
 .nav-link:hover {
-  color: #CBE5A3; /* verde oliva claro */
+  color: #CBE5A3;
 }
 
 /* === Hero Section === */
 #hero-section {
-  background-color: #FFF8E7; /* crema */
+  background-color: #FFF8E7;
   color: #333;
   padding-top: 6rem;
   text-align: center;
 }
 
 #hero-section h1 {
-  color: #D57A66; /* terracota */
+  color: #D57A66;
 }
 
 #hero-section .btn-primary {
-  background-color: #6B8E23; /* verde oliva */
+  background-color: #6B8E23;
   border-color: #6B8E23;
   transition: all 0.3s ease;
 }
@@ -63,7 +57,7 @@ body {
 
 /* === Títulos === */
 h1, h2, h5 {
-  color: #D57A66; /* terracota */
+  color: #D57A66;
 }
 
 /* === Cards === */
@@ -72,7 +66,7 @@ h1, h2, h5 {
   border-radius: 12px;
   overflow: hidden;
   background-color: #FFF;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .card:hover {
@@ -81,7 +75,7 @@ h1, h2, h5 {
 }
 
 .card-title {
-  color: #6B8E23; /* verde oliva */
+  color: #6B8E23;
   font-weight: 700;
 }
 
@@ -115,17 +109,18 @@ section {
 }
 
 /* === Contacto === */
-#contacto h2 {
+#contacto h2, #contacto h5 {
   color: #D57A66;
 }
-#contacto p,
-#contacto a {
+
+#contacto p, #contacto a {
   color: #333;
   transition: color 0.3s ease;
 }
+
 #contacto a:hover {
   color: #6B8E23;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 /* === Scroll suave === */
@@ -138,7 +133,7 @@ html {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding-bottom: 56.25%; /* relación 16:9 */
+  padding-bottom: 56.25%;
 }
 
 .map-responsive iframe {
@@ -150,48 +145,21 @@ html {
   border: 0;
 }
 
-/* Footer */
-#contacto {
-  background-color: #FFF8E7;
-  color: #333;
-  border-top: 3px solid #D57A66; /* detalle terracota */
-}
-
-#contacto h2, #contacto h5 {
-  color: #D57A66;
-}
-
-#contacto a {
-  color: #6B8E23;
-  text-decoration: none;
-}
-
-#contacto a:hover {
-  color: #5F7C1F;
-  text-decoration: underline;
-}
-
-
-/* Línea separadora entre datos y formulario */
+/* === Línea separadora entre datos y formulario === */
 .border-start-lg {
-  border-left: 2px solid #D57A66; /* terracota */
+  border-left: 2px solid #D57A66;
 }
 
 @media (max-width: 991px) {
-  /* Oculta línea en móviles */
   .border-start-lg {
     border-left: none;
   }
 }
 
-.filtros {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
+/* === Filtros === */
 .filtro {
   display: inline-block;
-  background-color: #CBE5A3; /* verde pistacho */
+  background-color: #CBE5A3;
   color: #333;
   font-weight: 600;
   border: none;
@@ -203,31 +171,31 @@ html {
 }
 
 .filtro:hover {
-  background-color: #B7D68F; /* más oscuro al hover */
+  background-color: #B7D68F;
   transform: scale(1.05);
 }
 
 .filtro.active {
-  background-color: #6B8E23; /* verde oliva oscuro para el activo */
-  color: #FFF8E7; /* texto crema */
-}
-.card {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 1;
+  background-color: #6B8E23;
+  color: #FFF8E7;
 }
 
-.card.oculto {
-  opacity: 0;
-  transform: scale(0.95);
-  pointer-events: none; /* Evita que se pueda interactuar mientras está oculto */
+/* === Catálogo / Productos con Grid === */
+#productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* columnas adaptables */
+  gap: 1.5rem; /* espacio entre tarjetas */
 }
+
 .producto {
   transition: opacity 0.3s ease, transform 0.3s ease;
   opacity: 1;
+  width: 100%; /* ocupa toda la celda */
 }
 
 .producto.oculto {
   opacity: 0;
   transform: scale(0.95);
   pointer-events: none;
+  display: none; /* elimina completamente el espacio ocupado */
 }

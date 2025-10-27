@@ -36,134 +36,130 @@
     </div>
   </nav>
 
-   <!-- HERO SECTION -->
-
+  <!-- HERO SECTION -->
   <header class="container-fluid py-5 mt-5 text-center" id="hero-section">
-  <img src="imagenes/icono.png" alt="Logo Dulce Golosía" class="img-fluid mb-3" style="max-width: 150px;">
-  <h1 class="display-4 fw-bold">Dulce Golosía</h1>
-  <p class="lead col-lg-8 mx-auto">
-  Pastelería artesanal en el corazón de Santiago. Celebramos la repostería desde recetas clásicas hasta creaciones contemporáneas, fieles al espíritu del amor por lo dulce y el arte de compartir.
-  </p>
-
-<a href="#catalogo" class="btn btn-primary btn-lg mt-3">Ver Nuestro Catálogo</a>
-
-</header> 
+    <img src="imagenes/icono.png" alt="Logo Dulce Golosía" class="img-fluid mb-3" style="max-width: 150px;">
+    <h1 class="display-4 fw-bold">Dulce Golosía</h1>
+    <p class="lead col-lg-8 mx-auto">
+      Pastelería artesanal en el corazón de Santiago. Celebramos la repostería desde recetas clásicas hasta creaciones contemporáneas, fieles al espíritu del amor por lo dulce y el arte de compartir.
+    </p>
+    <a href="#catalogo" class="btn btn-primary btn-lg mt-3">Ver Nuestro Catálogo</a>
+  </header>
 
   <!-- CATÁLOGO -->
-<section id="catalogo" class="py-5">
-  <div class="container">
-    <div class="row mb-4 text-center">
-      <div class="col">
-        <h2>Nuestro Catálogo</h2>
-        <p class="lead">Elaborados a mano con ingredientes de calidad y origen local.</p>
+  <section id="catalogo" class="py-5">
+    <div class="container">
+      <div class="row mb-4 text-center">
+        <div class="col">
+          <h2>Nuestro Catálogo</h2>
+          <p class="lead">Elaborados a mano con ingredientes de calidad y origen local.</p>
+        </div>
+      </div>
+
+      <!-- FILTROS -->
+      <div class="row mb-4 justify-content-center">
+        <div class="col-auto">
+          <button class="btn btn-outline-primary filtro active" data-filter="all">Todos</button>
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-outline-primary filtro" data-filter="sin-azucar">Sin Azúcar</button>
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-outline-primary filtro" data-filter="vegano">Vegano</button>
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-outline-primary filtro" data-filter="sin-gluten">Sin Gluten</button>
+        </div>
+      </div>
+
+      <!-- PRODUCTOS -->
+      <div class="row g-4" id="productos">
+        <!-- Queque de vainilla -->
+        <div class="col-lg-4 col-md-6 producto" data-categoria="sin-gluten">
+          <div class="card h-100 shadow-sm">
+            <img src="imagenes/queque.png" class="card-img-top" alt="Queque de vainilla tradicional" />
+            <div class="card-body">
+              <h5 class="card-title">Queque de vainilla tradicional</h5>
+              <p class="card-text">Receta casera, esponjoso y ligero.</p>
+            </div>
+            <div class="card-footer">
+              <span class="fw-bold">$7.000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Queque de zanahoria vegano -->
+        <div class="col-lg-4 col-md-6 producto" data-categoria="vegano">
+          <div class="card h-100 shadow-sm">
+            <img src="imagenes/quequeZanahoria.png" class="card-img-top" alt="Queque de zanahoria vegana" />
+            <div class="card-body">
+              <h5 class="card-title">Queque de zanahoria vegana</h5>
+              <p class="card-text">Con nueces, canela y glaseado de coco.</p>
+            </div>
+            <div class="card-footer">
+              <span class="fw-bold">$12.000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Empolvados -->
+        <div class="col-lg-4 col-md-6 producto" data-categoria="sin-azucar">
+          <div class="card h-100 shadow-sm">
+            <img src="imagenes/empolvados.png" class="card-img-top" alt="Empolvados" />
+            <div class="card-body">
+              <h5 class="card-title">Empolvados (2 unidades)</h5>
+              <p class="card-text">Delicados, rellenos de manjar y espolvoreados con azúcar flor.</p>
+            </div>
+            <div class="card-footer">
+              <span class="fw-bold">$3.500</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cocadas -->
+        <div class="col-lg-4 col-md-6 producto" data-categoria="sin-gluten">
+          <div class="card h-100 shadow-sm">
+            <img src="imagenes/cocadas.png" class="card-img-top" alt="Cocadas tradicionales" />
+            <div class="card-body">
+              <h5 class="card-title">Cocadas tradicionales (2 unidades)</h5>
+              <p class="card-text">Con coco rallado y azúcar.</p>
+            </div>
+            <div class="card-footer">
+              <span class="fw-bold">$3.000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alfajores -->
+        <div class="col-lg-4 col-md-6 producto" data-categoria="sin-azucar">
+          <div class="card h-100 shadow-sm">
+            <img src="imagenes/alfajores.png" class="card-img-top" alt="Alfajores de maicena" />
+            <div class="card-body">
+              <h5 class="card-title">Alfajores de maicena (2 unidades)</h5>
+              <p class="card-text">Con manjar y coco rallado.</p>
+            </div>
+            <div class="card-footer">
+              <span class="fw-bold">$4.000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Berlines -->
+        <div class="col-lg-4 col-md-6 producto" data-categoria="sin-gluten,vegano">
+          <div class="card h-100 shadow-sm">
+            <img src="imagenes/berlines.png" class="card-img-top" alt="Berlines rellenos" />
+            <div class="card-body">
+              <h5 class="card-title">Berlines rellenos (2 unidades)</h5>
+              <p class="card-text">De manjar o crema pastelera.</p>
+            </div>
+            <div class="card-footer">
+              <span class="fw-bold">$3.500</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- FILTROS -->
-    <div class="row mb-4 justify-content-center">
-      <div class="col-auto">
-        <button class="btn btn-outline-primary filtro active" data-filter="all">Todos</button>
-      </div>
-      <div class="col-auto">
-        <button class="btn btn-outline-primary filtro" data-filter="sin-azucar">Sin Azúcar</button>
-      </div>
-      <div class="col-auto">
-        <button class="btn btn-outline-primary filtro" data-filter="vegano">Vegano</button>
-      </div>
-      <div class="col-auto">
-        <button class="btn btn-outline-primary filtro" data-filter="sin-gluten">Sin Gluten</button>
-      </div>
-    </div>
-
-    <!-- PRODUCTOS -->
-    <div class="row g-4" id="productos">
-      <!-- Queque de vainilla -->
-      <div class="col-lg-4 col-md-6 producto" data-categoria="sin-gluten">
-        <div class="card h-100 shadow-sm">
-          <img src="imagenes/queque.png" class="card-img-top" alt="Queque de vainilla tradicional" />
-          <div class="card-body">
-            <h5 class="card-title">Queque de vainilla tradicional</h5>
-            <p class="card-text">Receta casera, esponjoso y ligero.</p>
-          </div>
-          <div class="card-footer">
-            <span class="fw-bold">$7.000</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Queque de zanahoria vegano -->
-      <div class="col-lg-4 col-md-6 producto" data-categoria="vegano">
-        <div class="card h-100 shadow-sm">
-          <img src="imagenes/quequeZanahoria.png" class="card-img-top" alt="Queque de zanahoria vegana" />
-          <div class="card-body">
-            <h5 class="card-title">Queque de zanahoria vegana</h5>
-            <p class="card-text">Con nueces, canela y glaseado de coco.</p>
-          </div>
-          <div class="card-footer">
-            <span class="fw-bold">$12.000</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Empolvados -->
-      <div class="col-lg-4 col-md-6 producto" data-categoria="sin-azucar">
-        <div class="card h-100 shadow-sm">
-          <img src="imagenes/empolvados.png" class="card-img-top" alt="Empolvados" />
-          <div class="card-body">
-            <h5 class="card-title">Empolvados (2 unidades)</h5>
-            <p class="card-text">Delicados, rellenos de manjar y espolvoreados con azúcar flor.</p>
-          </div>
-          <div class="card-footer">
-            <span class="fw-bold">$3.500</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cocadas -->
-      <div class="col-lg-4 col-md-6 producto" data-categoria="sin-gluten">
-        <div class="card h-100 shadow-sm">
-          <img src="imagenes/cocadas.png" class="card-img-top" alt="Cocadas tradicionales" />
-          <div class="card-body">
-            <h5 class="card-title">Cocadas tradicionales (2 unidades)</h5>
-            <p class="card-text">Con coco rallado y azúcar.</p>
-          </div>
-          <div class="card-footer">
-            <span class="fw-bold">$3.000</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Alfajores -->
-      <div class="col-lg-4 col-md-6 producto" data-categoria="sin-azucar">
-        <div class="card h-100 shadow-sm">
-          <img src="imagenes/alfajores.png" class="card-img-top" alt="Alfajores de maicena" />
-          <div class="card-body">
-            <h5 class="card-title">Alfajores de maicena (2 unidades)</h5>
-            <p class="card-text">Con manjar y coco rallado.</p>
-          </div>
-          <div class="card-footer">
-            <span class="fw-bold">$4.000</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Berlines -->
-      <div class="col-lg-4 col-md-6 producto" data-categoria="sin-gluten,vegano">
-        <div class="card h-100 shadow-sm">
-          <img src="imagenes/berlines.png" class="card-img-top" alt="Berlines rellenos" />
-          <div class="card-body">
-            <h5 class="card-title">Berlines rellenos (2 unidades)</h5>
-            <p class="card-text">De manjar o crema pastelera.</p>
-          </div>
-          <div class="card-footer">
-            <span class="fw-bold">$3.500</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- SOBRE NOSOTROS -->
   <section id="nosotros" class="py-5 bg-light">
@@ -182,92 +178,90 @@
     </div>
   </section>
 
+  <!-- FOOTER / CONTACTO -->
+  <footer id="contacto" class="py-5 bg-light">
+    <div class="container">
+      <div class="row mb-4 text-center">
+        <div class="col">
+          <h2 class="fw-bold">Contáctanos</h2>
+          <p class="lead">Ubícanos y envíanos un mensaje</p>
+        </div>
+      </div>
+      <div class="row g-4 align-items-start text-center text-lg-start">
+
+        <!-- Mapa -->
+        <div class="col-lg-4 col-md-12 mb-3 mb-lg-0">
+          <div class="map-responsive mb-3 mb-lg-0">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.1234567890!2d-70.6500!3d-33.4500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c0abcdef12345%3A0x1234567890abcdef!2sDulce%20Golos%C3%ADa!5e0!3m2!1ses-419!2scl!4v1700000000000!5m2!1ses-419!2scl"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Datos y Formulario (separados por línea) -->
+        <div class="col-lg-8 col-md-12 d-lg-flex">
+          <!-- Datos -->
+          <div class="flex-fill pe-lg-4">
+            <h5 class="fw-bold">Información</h5>
+            <p><strong>Dirección:</strong> Magnolia 567, Providencia, Santiago</p>
+            <p><strong>Teléfono:</strong> +56 9 8765 4321</p>
+            <p><strong>Email:</strong> <a href="mailto:contacto@dulcegolosia.cl">contacto@dulcegolosia.cl</a></p>
+            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/dulcegolosia" target="_blank">@dulcegolosia</a></p>
+          </div>
+
+          <!-- Formulario -->
+          <div class="flex-fill ps-lg-4 border-start-lg">
+            <form action="#" method="POST">
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="correo" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="correo" required>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-
+  <!-- Tu JavaScript para los filtros -->
   <script>
-const filtros = document.querySelectorAll('.filtro'); // coincide con tu HTML
-const cards = document.querySelectorAll('#productos .producto'); // coincide con tu contenedor
+    const filtros = document.querySelectorAll('.filtro');
+    const productos = document.querySelectorAll('.producto');
 
-filtros.forEach(boton => {
-  boton.addEventListener('click', () => {
-    // Quitar active de todos y poner active al clickeado
-    filtros.forEach(b => b.classList.remove('active'));
-    boton.classList.add('active');
+    filtros.forEach(boton => {
+      boton.addEventListener('click', () => {
+        // Quitar active de todos y poner active al clickeado
+        filtros.forEach(b => b.classList.remove('active'));
+        boton.classList.add('active');
 
-    const filtroSeleccionado = boton.dataset.filter;
+        const filtroSeleccionado = boton.dataset.filter;
 
-    cards.forEach(card => {
-      if (filtroSeleccionado === 'all' || card.dataset.categoria.split(',').includes(filtroSeleccionado)) {
-        card.classList.remove('oculto');
-      } else {
-        card.classList.add('oculto');
-      }
+        productos.forEach(producto => {
+          const categorias = producto.dataset.categoria.split(',').map(cat => cat.trim());
+          
+          if (filtroSeleccionado === 'all' || categorias.includes(filtroSeleccionado)) {
+            producto.classList.remove('oculto');
+          } else {
+            producto.classList.add('oculto');
+          }
+        });
+      });
     });
-  });
-});
-</script>
-
-
-  </body>
+  </script>
+</body>
 </html>
-
-<!-- FOOTER / CONTACTO -->
-<footer id="contacto" class="py-5 bg-light">
-  <div class="container">
-    <div class="row mb-4 text-center">
-      <div class="col">
-        <h2 class="fw-bold">Contáctanos</h2>
-        <p class="lead">Ubícanos y envíanos un mensaje</p>
-      </div>
-    </div>
-    <div class="row g-4 align-items-start text-center text-lg-start">
-
-      <!-- Mapa -->
-      <div class="col-lg-4 col-md-12 mb-3 mb-lg-0">
-        <div class="map-responsive mb-3 mb-lg-0">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.1234567890!2d-70.6500!3d-33.4500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c0abcdef12345%3A0x1234567890abcdef!2sDulce%20Golos%C3%ADa!5e0!3m2!1ses-419!2scl!4v1700000000000!5m2!1ses-419!2scl"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-
-      <!-- Datos y Formulario (separados por línea) -->
-      <div class="col-lg-8 col-md-12 d-lg-flex">
-        <!-- Datos -->
-        <div class="flex-fill pe-lg-4">
-          <h5 class="fw-bold">Información</h5>
-          <p><strong>Dirección:</strong> Magnolia 567, Providencia, Santiago</p>
-          <p><strong>Teléfono:</strong> +56 9 8765 4321</p>
-          <p><strong>Email:</strong> <a href="mailto:contacto@dulcegolosia.cl">contacto@dulcegolosia.cl</a></p>
-          <p><strong>Instagram:</strong> <a href="https://www.instagram.com/dulcegolosia" target="_blank">@dulcegolosia</a></p>
-        </div>
-
-        <!-- Formulario -->
-        <div class="flex-fill ps-lg-4 border-start-lg">
-          <form action="#" method="POST">
-            <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="nombre" required>
-            </div>
-            <div class="mb-3">
-              <label for="correo" class="form-label">Correo Electrónico</label>
-              <input type="email" class="form-control" id="correo" required>
-            </div>
-            <div class="mb-3">
-              <label for="mensaje" class="form-label">Mensaje</label>
-              <textarea class="form-control" id="mensaje" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
-          </form>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</footer>
-
