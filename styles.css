@@ -4,17 +4,35 @@ body {
   background-color: #FFF8E7;
   color: #333;
   line-height: 1.6;
+  transition: background-color 0.5s ease;
+}
+
+body.scrolled {
+  background-color: rgba(203, 229, 163, 0.3); /* #CBE5A3 con opacidad */
 }
 
 /* === Navbar === */
 .navbar {
   background-color: #D57A66;
+  padding: 0.5rem 1rem;
 }
 
 .navbar-brand {
   color: #FFF8E7;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 40px;
+  width: 40px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: #FFF8E7;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar-brand:hover {
@@ -24,11 +42,87 @@ body {
 .nav-link {
   color: #FFF8E7;
   font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
   color: #CBE5A3;
+}
+
+/* === Hero Banner === */
+.hero-banner {
+  min-height: 70vh;
+  position: relative;
+  overflow: hidden;
+  margin-top: 56px; /* altura del navbar */
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.banner-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.logo-hero {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  padding: 15px;
+  background-color: #FFF8E7;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    min-height: 100vh;
+  }
+  
+  .logo-hero {
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
 }
 
 /* === Hero Section === */
@@ -66,12 +160,40 @@ h1, h2, h5 {
   border-radius: 12px;
   overflow: hidden;
   background-color: #FFF;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  background-color: #FFF8E7;
+}
+
+.card:hover .card-title {
+  color: #D57A66;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.card-body {
+  position: relative;
+  z-index: 1;
+}
+
+.producto .card-footer {
+  transition: background-color 0.3s ease;
+}
+
+.card:hover .card-footer {
+  background-color: #CBE5A3;
 }
 
 .card-title {
@@ -90,6 +212,24 @@ h1, h2, h5 {
 section {
   background-color: #FFF8E7;
   padding: 60px 0;
+}
+
+/* === Sección Nosotros === */
+#nosotros {
+  font-family: 'Lato', sans-serif;
+}
+
+#nosotros p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+#nosotros .lead {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
 }
 
 /* === Formularios === */
