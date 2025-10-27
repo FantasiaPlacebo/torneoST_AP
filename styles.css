@@ -1,0 +1,233 @@
+/* === Tipografía general === */
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #FFF8E7; /* crema */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* === Colores principales ===
+   Terracota: #D57A66
+   Crema:     #FFF8E7
+   Verde oliva: #6B8E23
+*/
+
+/* === Navbar === */
+.navbar {
+  background-color: #D57A66; /* terracota */
+}
+
+.navbar-brand {
+  color: #FFF8E7;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar-brand:hover {
+  color: #F5E4C3; /* crema clara */
+}
+
+.nav-link {
+  color: #FFF8E7;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #CBE5A3; /* verde oliva claro */
+}
+
+/* === Hero Section === */
+#hero-section {
+  background-color: #FFF8E7; /* crema */
+  color: #333;
+  padding-top: 6rem;
+  text-align: center;
+}
+
+#hero-section h1 {
+  color: #D57A66; /* terracota */
+}
+
+#hero-section .btn-primary {
+  background-color: #6B8E23; /* verde oliva */
+  border-color: #6B8E23;
+  transition: all 0.3s ease;
+}
+
+#hero-section .btn-primary:hover {
+  background-color: #5F7C1F;
+  border-color: #5F7C1F;
+  color: #FFF8E7;
+}
+
+/* === Títulos === */
+h1, h2, h5 {
+  color: #D57A66; /* terracota */
+}
+
+/* === Cards === */
+.card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #FFF;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  color: #6B8E23; /* verde oliva */
+  font-weight: 700;
+}
+
+.card-footer {
+  background-color: #FFF8E7;
+  border-top: none;
+  font-weight: bold;
+  color: #D57A66;
+}
+
+/* === Secciones === */
+section {
+  background-color: #FFF8E7;
+  padding: 60px 0;
+}
+
+/* === Formularios === */
+.form-control {
+  border-radius: 6px;
+  border: 1px solid #CBE5A3;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #6B8E23;
+  box-shadow: 0 0 0 0.2rem rgba(107, 142, 35, 0.25);
+}
+
+.btn {
+  border-radius: 6px;
+}
+
+/* === Contacto === */
+#contacto h2 {
+  color: #D57A66;
+}
+#contacto p,
+#contacto a {
+  color: #333;
+  transition: color 0.3s ease;
+}
+#contacto a:hover {
+  color: #6B8E23;
+  text-decoration: none;
+}
+
+/* === Scroll suave === */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Mapa responsivo === */
+.map-responsive {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 56.25%; /* relación 16:9 */
+}
+
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Footer */
+#contacto {
+  background-color: #FFF8E7;
+  color: #333;
+  border-top: 3px solid #D57A66; /* detalle terracota */
+}
+
+#contacto h2, #contacto h5 {
+  color: #D57A66;
+}
+
+#contacto a {
+  color: #6B8E23;
+  text-decoration: none;
+}
+
+#contacto a:hover {
+  color: #5F7C1F;
+  text-decoration: underline;
+}
+
+
+/* Línea separadora entre datos y formulario */
+.border-start-lg {
+  border-left: 2px solid #D57A66; /* terracota */
+}
+
+@media (max-width: 991px) {
+  /* Oculta línea en móviles */
+  .border-start-lg {
+    border-left: none;
+  }
+}
+
+.filtros {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filtro {
+  display: inline-block;
+  background-color: #CBE5A3; /* verde pistacho */
+  color: #333;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  padding: 0.5rem 1.2rem;
+  margin: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filtro:hover {
+  background-color: #B7D68F; /* más oscuro al hover */
+  transform: scale(1.05);
+}
+
+.filtro.active {
+  background-color: #6B8E23; /* verde oliva oscuro para el activo */
+  color: #FFF8E7; /* texto crema */
+}
+.card {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+.card.oculto {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none; /* Evita que se pueda interactuar mientras está oculto */
+}
+.producto {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+}
+
+.producto.oculto {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
