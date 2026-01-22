@@ -21,18 +21,5 @@ Página web de tienda de golosinas ganadora del Torneo de Programación Web 2025
 - Nicolás Andrés Guerra Hernández - [@FantasiaPlacebo](https://github.com/FantasiaPlacebo)
 - Alexander Acevedo - [@SrLittleBaby](https://github.com/SrLittleBaby)
 
-## 🚀 Cómo Abrir
-
-1. Descarga el repositorio:
-
-git clone https://github.com/FantasiaPlacebo/tornoeST_AP.git
-
-2. Abre index.html en tu navegador
-
-O usa un servidor local:
-
-python -m http.server 8000
-
-Luego ve a http://localhost:8000
-
 ---
+
